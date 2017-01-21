@@ -216,7 +216,7 @@ void ConfigItem::updateMenu(void)
 			setRenameEnabled(i, TRUE);
 		setText(dataColIdx, data);
 		if (type == S_STRING)
-			prompt = QString("%1: %2").arg(prompt).arg(data);
+			prompt = QString("%1:").arg(prompt);
 		else
 			prompt = QString("(%2) %1").arg(prompt).arg(data);
 		break;
