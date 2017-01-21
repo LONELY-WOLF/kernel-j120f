@@ -924,7 +924,7 @@ static DEVICE_ATTR(vendor, 0440, bma254_vendor_show, NULL);
 static DEVICE_ATTR(raw_data, 0440, bma254_raw_data_show, NULL);
 static DEVICE_ATTR(calibration, S_IRUGO | S_IWUSR | S_IWGRP,
 	bma254_calibration_show, bma254_calibration_store);
-static DEVICE_ATTR(selftest, S_IRUGO|S_IWUSR|S_IWGRP,
+static DEVICE_ATTR(selftest, S_IRUGO/*|S_IWUSR|S_IWGRP*/,
 		bma254_selftest_show, NULL);
 static DEVICE_ATTR(lowpassfilter, S_IRUGO|S_IWUSR|S_IWGRP,
 		bma254_lowpassfilter_show, bma254_lowpassfilter_store);
