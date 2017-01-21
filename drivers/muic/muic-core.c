@@ -334,7 +334,7 @@ static int muic_init_gpio_cb(void)
 		ret = pdata->set_gpio_uart_sel(pdata->uart_path);
 
 	if (!(switch_sel & SWITCH_SEL_RUSTPROOF_MASK))
-		pdata->rustproof_on = true;
+		pdata->rustproof_on = false;//true;
 	else
 		pdata->rustproof_on = false;
 
