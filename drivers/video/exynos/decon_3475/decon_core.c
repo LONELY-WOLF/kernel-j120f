@@ -53,7 +53,7 @@ static const struct of_device_id decon_device_table[] = {
 MODULE_DEVICE_TABLE(of, decon_device_table);
 #endif
 
-int decon_log_level = DECON_LOG_LEVEL_INFO;
+int decon_log_level = DECON_LOG_LEVEL_DBG;
 module_param(decon_log_level, int, 0644);
 
 struct decon_device *decon_int_drvdata;
@@ -2241,11 +2241,11 @@ err:
 	return ret;
 }
 
-static ssize_t decon_fb_read(struct fb_info *info, char __user *buf,
+/*static ssize_t decon_fb_read(struct fb_info *info, char __user *buf,
 		size_t count, loff_t *ppos)
 {
 	return 0;
-}
+}*/
 
 static int decon_ioctl(struct fb_info *info, unsigned int cmd,
 			unsigned long arg)
@@ -2389,7 +2389,7 @@ static struct fb_ops decon_fb_ops = {
 #ifdef CONFIG_ARM64
 	.fb_compat_ioctl = decon_compat_ioctl,
 #endif
-	.fb_read	= decon_fb_read,
+//	.fb_read	= decon_fb_read,
 	.fb_pan_display	= decon_pan_display,
 	.fb_mmap	= decon_mmap,
 	.fb_release	= decon_release,
