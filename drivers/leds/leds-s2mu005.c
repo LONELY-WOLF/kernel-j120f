@@ -579,7 +579,7 @@ err:
 	return size;
 }
 
-static DEVICE_ATTR(rear_flash, 0644, rear_flash_show, rear_flash_store);
+//static DEVICE_ATTR(rear_flash, 0644, rear_flash_show, rear_flash_store);
 
 #if defined(CONFIG_OF)
 static int s2mu005_led_dt_parse_pdata(struct device *dev,
@@ -682,7 +682,7 @@ dt_err:
 
 int create_flash_sysfs(void)
 {
-	int err = -ENODEV;
+	/*int err = -ENODEV;
 
 	if (IS_ERR_OR_NULL(camera_class)) {
 		pr_err("flash_sysfs: error, camera class not exist");
@@ -699,7 +699,7 @@ int create_flash_sysfs(void)
 	if (unlikely(err < 0)) {
 		pr_err("flash_sysfs: failed to create device file, %s\n",
 				dev_attr_rear_flash.attr.name);
-	}
+	}*/
 	return 0;
 }
 
