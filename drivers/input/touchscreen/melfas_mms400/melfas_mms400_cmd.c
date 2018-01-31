@@ -1066,6 +1066,11 @@ static ssize_t mms_sys_cmd(struct device *dev, struct device_attribute *devattr,
 		goto ERROR;
 	}
 
+	if (count >= CMD_LEN) { 
+		printk(KERN_ERR "%s: overflow command length\n", __func__); 
+		return -EINVAL; 
+	} 
+
 	if (info->cmd_busy == true) {
 		tsp_debug_err(true, &info->client->dev,
 			"%s [ERROR] previous command is not ended\n", __func__);
@@ -1131,7 +1136,7 @@ static ssize_t mms_sys_cmd(struct device *dev, struct device_attribute *devattr,
 				param_cnt++;
 			}
 			cur++;
-		} while (cur - buf <= len);
+		} while ((cur - buf <= len) && (param_cnt < CMD_PARAM_NUM));
 	}
 
 	//print
