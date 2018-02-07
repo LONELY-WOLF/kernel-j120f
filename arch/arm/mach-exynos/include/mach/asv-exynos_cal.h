@@ -52,7 +52,7 @@ u32 cal_set_ema(u32 id, u32 volt);
 #ifdef CONFIG_SOC_EXYNOS7420
 u32 cal_get_asv_info(int id);
 #else
-extern inline u32 cal_get_asv_info(int id){return 0;};
+inline u32 cal_get_asv_info(int id){return 0;};
 extern u32 get_asv_ids(void);
 extern u32 get_asv_hpm(void);
 extern u32 get_asv_ro(void);
