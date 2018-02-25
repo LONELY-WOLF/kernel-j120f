@@ -203,41 +203,41 @@ struct tsk_event_val {
 
 struct tsk_event_val tsk_ev_old[8] =
 {
-	{0x01, TSK_PRESS, KEY_BACK, "back"},
-	{0x02, TSK_PRESS, KEY_RECENT, "recent"},
+	{0x01, TSK_PRESS, KEY_ESC, "back"},
+	{0x02, TSK_PRESS, KEY_COMPOSE, "recent"},
 	{0x03, TSK_PRESS, KEY_DUMMY_BACK, "dummy_back"},
 	{0x04, TSK_PRESS, KEY_DUMMY_MENU, "dummy_menu"},
-	{0x09, TSK_RELEASE, KEY_BACK, "back"},
-	{0x0A, TSK_RELEASE, KEY_RECENT, "recent"},
+	{0x09, TSK_RELEASE, KEY_ESC, "back"},
+	{0x0A, TSK_RELEASE, KEY_COMPOSE, "recent"},
 	{0x0B, TSK_RELEASE, KEY_DUMMY_BACK, "dummy_back"},
 	{0x0C, TSK_RELEASE, KEY_DUMMY_MENU, "dummy_menu"}
 };
 #ifdef CONFIG_TOUCHKEY_GRIP
 struct tsk_event_val tsk_ev[6] =
 {
-	{0x01 << 0, TSK_PRESS, KEY_RECENT, "recent"},
-	{0x01 << 1, TSK_PRESS, KEY_BACK, "back"},
+	{0x01 << 0, TSK_PRESS, KEY_COMPOSE, "recent"},
+	{0x01 << 1, TSK_PRESS, KEY_ESC, "back"},
 	{0x01 << 2, TSK_PRESS, KEY_FRONT_SAR, "grip"},
-	{0x01 << 4, TSK_RELEASE, KEY_RECENT, "recent"},
-	{0x01 << 5, TSK_RELEASE, KEY_BACK, "back"},
+	{0x01 << 4, TSK_RELEASE, KEY_COMPOSE, "recent"},
+	{0x01 << 5, TSK_RELEASE, KEY_ESC, "back"},
 	{0x01 << 6, TSK_RELEASE, KEY_FRONT_SAR, "grip"}
 };
 #else
 struct tsk_event_val tsk_ev[4] =
 {
-	{0x01 << 0, TSK_PRESS, KEY_RECENT, "recent"},
-	{0x01 << 1, TSK_PRESS, KEY_BACK, "back"},
-	{0x01 << 4, TSK_RELEASE, KEY_RECENT, "recent"},
-	{0x01 << 5, TSK_RELEASE, KEY_BACK, "back"}
+	{0x01 << 0, TSK_PRESS, KEY_COMPOSE, "recent"},
+	{0x01 << 1, TSK_PRESS, KEY_ESC, "back"},
+	{0x01 << 4, TSK_RELEASE, KEY_COMPOSE, "recent"},
+	{0x01 << 5, TSK_RELEASE, KEY_ESC, "back"}
 };
 #endif
 
 struct tsk_event_val tsk_ev_swap[4] =
 {
-	{0x01 << 0, TSK_PRESS, KEY_BACK, "back"},
-	{0x01 << 1, TSK_PRESS, KEY_RECENT, "recent"},
-	{0x01 << 4, TSK_RELEASE, KEY_BACK, "back"},
-	{0x01 << 5, TSK_RELEASE, KEY_RECENT, "recent"}
+	{0x01 << 0, TSK_PRESS, KEY_ESC, "back"},
+	{0x01 << 1, TSK_PRESS, KEY_COMPOSE, "recent"},
+	{0x01 << 4, TSK_RELEASE, KEY_ESC, "back"},
+	{0x01 << 5, TSK_RELEASE, KEY_COMPOSE, "recent"}
 };
 
 struct tc300k_data {

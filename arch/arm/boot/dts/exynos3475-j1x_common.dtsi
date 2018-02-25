@@ -546,7 +546,7 @@
 			label = "gpio-keys: KEY_HOMEPAGE";
 			interrupts = <7 0 0>;
 			interrupt-parent = <&gpa0>;
-			linux,code = <172>;
+			linux,code = <157>;
 			gpios = <&gpa0 7 0xf>;
 			gpio-key,wakeup = <1>;
 		};
