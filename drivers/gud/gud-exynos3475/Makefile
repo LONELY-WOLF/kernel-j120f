@@ -1,7 +1,7 @@
 #
 # Makefile for the kernel mobicore drivers
 #
-GUD_ROOT_FOLDER := drivers/gud/gud-exynos3475
+GUD_ROOT_FOLDER := $(shell cd $(KBUILD_SRC) && /bin/pwd)/drivers/gud/gud-exynos3475
 # add our modules to kernel.
 obj-$(CONFIG_MOBICORE_API) += mcKernelApi.o
 obj-$(CONFIG_MOBICORE_DRIVER) += mcDrvModule.o
